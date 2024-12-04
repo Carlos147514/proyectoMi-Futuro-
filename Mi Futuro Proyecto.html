@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mi Futuro Proyecto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!---link para trabajar con iconos-->
+    <link rel="stylesheet" href="estilos.css"> <!----hipervinculo mi propio codigo css-->
+</head>
+
+<body>
+    
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Mas que una compra, una experiencia.</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">JuanaPrix</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Nosotros</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#reservas">Reservas</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Zonas de Entrega</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sucursales</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Productos
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li><a class="dropdown-item" href="#">Aguas</a></li>
+                                        <li><a class="dropdown-item" href="#">Aguas saborizadas</a></li>
+                                        <li><a class="dropdown-item" href="#">Alimentos</a></li>
+                                        <li><a class="dropdown-item" href="#">Aperitivos</a></li>
+                                        <li><a class="dropdown-item" href="#">Cervezas</a></li>
+                                        <li><a class="dropdown-item" href="#">Energizantes</a></li>
+                                        <li><a class="dropdown-item" href="#">Espumantes</a></li>
+                                        <li><a class="dropdown-item" href="#">Fernet</a></li>
+                                        <li><a class="dropdown-item" href="#">Gaseosas</a></li>
+                                        <li><a class="dropdown-item" href="#">Gin</a></li>
+                                        <li><a class="dropdown-item" href="#">Isotonicas</a></li>
+                                        <li><a class="dropdown-item" href="#">Jugos</a></li>
+                                        <li><a class="dropdown-item" href="#">Otros</a></li>
+                                        <li><a class="dropdown-item" href="#">Ron</a></li>
+                                        <li><a class="dropdown-item" href="#">Sidras</a></li>
+                                        <li><a class="dropdown-item" href="#">Snack</a></li>
+                                        <li><a class="dropdown-item" href="#">Tequilas</a></li>
+                                        <li><a class="dropdown-item" href="#">vinos</a></li>
+                                        <li><a class="dropdown-item" href="#">Vodka</a></li>
+                                        <li><a class="dropdown-item" href="#">Whisky</a></li>
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <form class="d-flex mt-3" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </form>
+                            <button id="dar-mode-toggle" class="btn btn-outline-light">
+                                <i class="bi bi-moon"></i>
+                            </button>
+                            <!----luna sol modo oscuro que si lo toco cambio a claro-->
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!---Modal-->
+        <div class="modal fade" id="reservas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Reservas de eventos</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="needs-validation" novalidate method="post" action="datos.php">
+                            <div class="mb-3">
+                                <label for="first-name" class="col-form-label">Nombre * </label>
+                                <input type="text" class="form-control" id="first-name" name="first-name"
+                                    required><!---campo requerido>-->
+                                <div class="valid-feedback">
+                                    ¡Valor valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Este campo nombre no puede estar vacio.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="last-name" class="col-form-label">Apellido * </label>
+                                <input type="text" class="form-control" id="last-name" name="last-name" required>
+                                <div class="valid-feedback">
+                                    ¡Valor valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Este campo Apellido no puede estar vacio.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">Correo electronico *</label>
+                                <input type="text" class="form-control" id="email" name="email" required>
+                                <div class="valid-feedback">
+                                    ¡Valor valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Este campo Correo electronico no puede estar vacio.
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="form-control" for="eventos">Eventos *</label>
+                                <select class="form-select" aria-label="Seleccionar que celebramos...." id="eventos"
+                                    name="eventos" required>
+                                    <div class="valid-feedback">
+                                        ¡Valor valido!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Este campo Apellido no puede estar vacio.
+                                    </div>
+                            </div>
+                            <option selected>Que celebramos...</option>
+                            <option value="1">Casamientos</option>
+                            <option value="2">Cumpleaños</option>
+                            <option value="3">Despedidas</option>
+                            </select>
+
+                    </div>
+                    <br>
+                    <div>
+                        <label class="form-control" for="zone">Zona favorita *</label>
+                        <select class="form-select" aria-label="Seleccionar la zona...." id="zone" name="zone" required>
+                            <div class="valid-feedback">
+                                ¡Valor valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Este campo Zona favorita no puede estar vacio.
+                            </div>
+                            <option  value="" disabled>Seleccione su lugar favorito...</option>
+                            <option value="1">Salon Principal</option>
+                            <option value="2">Barra</option>
+                            <option value="3">Terraza</option>
+                        </select>
+
+                    </div>
+                    <br>
+                    <div>
+                        <label class="form-control" for="zone">Cantidad de personas *</label>
+                        <select class="form-select" aria-label="Seleccionar cantidad...." id="zone" name="zone"
+                            required>
+                            <div class="valid-feedback">
+                                ¡Valor valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Este campo Cantidad de personas no puede estar vacio.
+                            </div>
+                            <option selected>Seleccione cantidad de personas..</option>
+                            <option value="1">25 personas</option>
+                            <option value="2">50 personas</option>
+                            <option value="3">75 persoans</option>
+                            <option value="1">100 personas</option>
+                            <option value="2">150 personas</option>
+
+
+
+                        </select>
+
+                    </div>
+                    <br>
+
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Comentarios:</label>
+                        <textarea class="form-control" id="message-text" name="message-text"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Reservar</button><!---submit/ enviar-->
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!----carrusel de imagenes-->
+    <section>
+        <div id="carouselExampleCaptions" class="carousel slidedata-bs-ride=" carousel ">
+                <!-- carrusel en forma automatica,apenas se cargue la pagina el carrusel se ejecutara-->
+                <div class=" carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagenes/carrusel tecno.jpg" class="d-block w-100" alt="imagenes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Tu fiesta es con JuanaPrix</h2>
+                    <p>Te cotizamos el mejor precio.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/carrusel chica fiesta.jpg" class="d-block w-100" alt="imagenes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagenes/local1.jpg" class="d-block w-100" alt="imagenes">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="mr-20 p-0">
+        <h1>Bienvenidos a JuanaPrix</h1>
+        <p>Disfruta de la mejor experiencia en un ambiente acogedor</p>
+    </section>
+
+    <!----cards-->
+    <section class="container p-0"> <!----padding a los costados 0, que no tenga separacion-->
+        <div class="row"> <!---clase fila-->
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <img src=" imagenes/card cervezas2.jpeg" class="card-img-top" alt="Cervezas">
+                <div class="card card-body">
+                    <h5 class="card-title">Cervezas</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="btn btn-warning d-block">Ver mas</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <img src="imagenes/cards geaeosa3.jpeg" class="card-img-top" alt="Gaseosas">
+                <div class="card card-body">
+                    <h5 class="card-title">Gaseosas</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="btn btn-warning d-block">Ver mas</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <img src="imagenes/cards espumantes 2.jpeg" class="card-img-top" alt="Espumantes">
+                <div class="card card-body">
+                    <h5 class="card-title">Espumantes</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="btn btn-warning d-block">Ver mas</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <img src="imagenes/cards fernet2.jpeg" class="card-img-top" alt="Fernet">
+                <div class="card card-body">
+                    <h5 class="card-title">Fernet</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="btn btn-warning d-block">Ver mas</a>
+                </div>
+            </div>
+
+
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <img src="imagenes/cards vinos 5.jpeg" class="card-img-top" alt="Vinos">
+                <div class="card card-body">
+                    <h5 class="card-title">Vinos</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="btn btn-warning d-block">Ver mas</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <img src="imagenes/cards aguas3.jpeg" class="card-img-top" alt="Aguas">
+                <div class="card card-body">
+                    <h5 class="card-title">Aguas</h5>
+                    <p class="card-text">Lorem ipsum dolor sit amet.</p>
+                    <a href="#" class="btn btn-warning d-block">Ver mas</a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+    <!---alt+shif+f  para organizar el codigo-->
+
+    <section class="container my-5 p-0 Productos">
+        <h4 class="subtitulo">Productos destacados</h4>
+        <img class="w-100" src="imagenes/cocteles.jpg" alt="Productos">
+    </section>
+
+
+    <!----card copiado-->
+    <!----cards-->
+    <section class="container p-0 "> <!----padding a los costados 0, que no tenga separacion-->
+        <div class="row"> <!---clase fila-->
+            <span class="border-0"></span>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <img src="imagenes/cards catena zapata4.jpeg" class="card-img-top" alt="Vinos">
+                <div class="card card-body">
+                    <h5 class="card-title">Vino Catena zapata</h5>
+                    <p class="card-text">Malbc/750 ML $58.300</p>
+                    <a href="#" class="btn btn-primary d-block">Ver mas</a>
+                </div>
+            </div>
+
+            <div class=" col-12 col-md-6 col-lg-4 mb-3">
+                <img src=" imagenes/cards jack daniels.jpeg" class="card-img-top" alt="Whisky">
+                <div class="card card-body">
+                    <h5 class="card-title">Whisky Jack Daniels</h5>
+                    <p class="card-text">Jack Daniels/Bot/750 ML $37.600</p>
+                    <a href="#" class="btn btn-primary d-block">Ver mas</a>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <img src="imagenes/card cerveza corona.jpeg" class="card-img-top" alt="Cervezas">
+                <div class="card card-body">
+                    <h5 class="card-title">Cerveza Corona</h5>
+                    <p class="card-text">Botella/330 ML $1150</p>
+                    <a href="#" class="btn btn-primary d-block">Ver mas</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <!---alt+shif+f  para organizar el codigo-->
+    <section>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card text-white bg-secondary mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">JuanaPrix</h5>
+                        <p class="card-text">Conoce todas nuestras sucursales que tenemos disponibles para vos.</p>
+                        <a href="#" class="btn btn-primary">Sucursales</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-white bg-danger mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Tratamiento especial con el cliente</h5> <a
+                            href="https://api.whatsapp.com/send?phone=541164610799&text=Hola%2C+te+consulto+desde+el+perfil+de+Instagram&fbclid=PAAaZJx9l493bLrwgvZv-Dm2hqXyylJs99DI9AVfQ0aGIEubVnih36uZpCSgs_aem_Ad0fzp3R9HZniLePp_Zcdt4QvRkE3zA6aOnrfBdtmZpbJZXkpa5H5zZ7uUV2Js6ih3o"
+                            target="_blank"><i class="bi bi-whatsapp"></i>Whatssap</a>
+                        <p class="card-text">¿Necesitas atencion personalizada?. Tenemos el mejor servicio para
+                            ofrecerte. Contactanos.</p>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-lg-4 col-s-3 icon-footer">
+                    <a href="#"><i style="font-size: 2rem" class="bi bi-truck"> </i> </a>
+                    <p><strong>Envio gratis</strong><br> Por $50.000 por compra</p>
+                </div>
+
+
+                <div class="col-xs-6 col-lg-4 icon-footer">
+                    <a href="#"><i style="font-size: 2rem" class="bi bi-clock"> </i> </a>
+                    <p><strong>Envio gratis</strong><br> Por $50.000 por compra</p>
+                </div>
+
+                <div class="col-xs-6 col-lg-4 icon-footer">
+                    <a href="#"><i style="font-size: 2rem" class="bi bi-lock"> </i> </a>
+                    <p><strong>Envio gratis</strong><br> Por $50.000 por compra</p>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <div class="container-fluid">
+        <div class="row p-5 bg-secondary text-white">
+    
+        <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h3">JuanaPrix</p>
+        <a href="#"></a>
+        <hr class="mb-4">
+        <p class="text-white">Metodo de pago</p>
+        <p class="text-white">Metodo de envio</p>
+    
+        </div> 
+    
+        <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h3">Descuentos </p>
+        <a href="#"></a>
+        <hr class="mb-4">
+        <p class="text-white">En productos aleatorios</p>
+    
+        </div> 
+    
+        <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h3">Contactanos</p>
+        <a href="#"></a>
+        <hr class="mb-4">
+        <p> <li class="fas fa-home md-3"> Casa Central</li> </p >
+        <p> <li class="fas fa-phone md-3"> Telefono</li> </p >   
+        <p> <li class="fas fa-envelope md-3"> Email</li> </p >
+        <p> <li class="fas fa-home md-3"> Boton de Arrepeentimirnto</li> </p >   
+        </div> 
+    
+         <div class=" col-xs-12 col-md-6 col-lg-3 justify-content-around w-25">
+         <p class="h3">Redes Sociales</p>
+         <a href="#"></a>
+         <hr class="mb-4">
+          <!---arau que le asigne altededor de los elementos un espacio-->
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-instagram"></i> </a>
+        <!----Para que se abra en una ventana nueva-->
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-facebook"></i></a>
+        <!----para agrandar el tamaño del icono-->
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-youtube"></i></a>
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-twitter-x"></i></a>
+         
+            
+         </div>     
+    
+        </div>
+    
+      </div>
+
+    <div class="container my-5 p-0 d-flex justify-content-around w-25">
+        <!---arau que le asigne altededor de los elementos un espacio-->
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-instagram"></i> </a>
+        <!----Para que se abra en una ventana nueva-->
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-facebook"></i></a>
+        <!----para agrandar el tamaño del icono-->
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-youtube"></i></a>
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-twitter-x"></i></a>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Zona de entrega</title><!---cambio de titulo-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!---link para trabajar con iconos-->
+    <link rel="stylesheet" href="estilos.css"> <!----hipervinculo mi propio codigo css-->
+</head>
+
+<body>
+    
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="Mi Futuro Proyecto.html">Mas que una compra, una experiencia.</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                        aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">JuanaPrix</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="Mi Futuro Proyecto.html">Inicio</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Nosotros.html">Nosotros</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#" data-bs-toggle="modal"
+                                        data-bs-target="#reservas">Reservas</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Zona de Entrega.html">Zonas de Entrega</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Contacto.html">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="Sucursales.html">Sucursales</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Productos
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li><a class="dropdown-item" href="#">Aguas</a></li>
+                                        <li><a class="dropdown-item" href="#">Aguas saborizadas</a></li>
+                                        <li><a class="dropdown-item" href="#">Alimentos</a></li>
+                                        <li><a class="dropdown-item" href="#">Aperitivos</a></li>
+                                        <li><a class="dropdown-item" href="#">Cervezas</a></li>
+                                        <li><a class="dropdown-item" href="#">Energizantes</a></li>
+                                        <li><a class="dropdown-item" href="#">Espumantes</a></li>
+                                        <li><a class="dropdown-item" href="#">Fernet</a></li>
+                                        <li><a class="dropdown-item" href="#">Gaseosas</a></li>
+                                        <li><a class="dropdown-item" href="#">Gin</a></li>
+                                        <li><a class="dropdown-item" href="#">Isotonicas</a></li>
+                                        <li><a class="dropdown-item" href="#">Jugos</a></li>
+                                        <li><a class="dropdown-item" href="#">Otros</a></li>
+                                        <li><a class="dropdown-item" href="#">Ron</a></li>
+                                        <li><a class="dropdown-item" href="#">Sidras</a></li>
+                                        <li><a class="dropdown-item" href="#">Snack</a></li>
+                                        <li><a class="dropdown-item" href="#">Tequilas</a></li>
+                                        <li><a class="dropdown-item" href="#">vinos</a></li>
+                                        <li><a class="dropdown-item" href="#">Vodka</a></li>
+                                        <li><a class="dropdown-item" href="#">Whisky</a></li>
+
+
+                                    </ul>
+                                </li>
+                            </ul>
+
+                            <form class="d-flex mt-3" role="search">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </form>
+                            <button id="dar-mode-toggle" class="btn btn-outline-light">
+                                <i class="bi bi-moon"></i>
+                            </button>
+                            <!----luna sol modo oscuro que si lo toco cambio a claro-->
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!---Modal-->
+        <div class="modal fade" id="reservas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Reservas de eventos</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form class="needs-validation" novalidate method="post" action="datos.php">
+                            <div class="mb-3">
+                                <label for="first-name" class="col-form-label">Nombre * </label>
+                                <input type="text" class="form-control" id="first-name" name="first-name"
+                                    required><!---campo requerido>-->
+                                <div class="valid-feedback">
+                                    ¡Valor valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Este campo nombre no puede estar vacio.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="last-name" class="col-form-label">Apellido * </label>
+                                <input type="text" class="form-control" id="last-name" name="last-name" required>
+                                <div class="valid-feedback">
+                                    ¡Valor valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Este campo Apellido no puede estar vacio.
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="col-form-label">Correo electronico *</label>
+                                <input type="text" class="form-control" id="email" name="email" required>
+                                <div class="valid-feedback">
+                                    ¡Valor valido!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Este campo Correo electronico no puede estar vacio.
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="form-control" for="eventos">Eventos *</label>
+                                <select class="form-select" aria-label="Seleccionar que celebramos...." id="eventos"
+                                    name="eventos" required>
+                                    <div class="valid-feedback">
+                                        ¡Valor valido!
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Este campo Apellido no puede estar vacio.
+                                    </div>
+                            </div>
+                            <option selected>Que celebramos...</option>
+                            <option value="1">Casamientos</option>
+                            <option value="2">Cumpleaños</option>
+                            <option value="3">Despedidas</option>
+                            </select>
+
+                    </div>
+                    <br>
+                    <div>
+                        <label class="form-control" for="zone">Zona favorita *</label>
+                        <select class="form-select" aria-label="Seleccionar la zona...." id="zone" name="zone" required>
+                            <div class="valid-feedback">
+                                ¡Valor valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Este campo Zona favorita no puede estar vacio.
+                            </div>
+                            <option  value="" disabled>Seleccione su lugar favorito...</option>
+                            <option value="1">Salon Principal</option>
+                            <option value="2">Barra</option>
+                            <option value="3">Terraza</option>
+                        </select>
+
+                    </div>
+                    <br>
+                    <div>
+                        <label class="form-control" for="zone">Cantidad de personas *</label>
+                        <select class="form-select" aria-label="Seleccionar cantidad...." id="zone" name="zone"
+                            required>
+                            <div class="valid-feedback">
+                                ¡Valor valido!
+                            </div>
+                            <div class="invalid-feedback">
+                                Este campo Cantidad de personas no puede estar vacio.
+                            </div>
+                            <option selected>Seleccione cantidad de personas..</option>
+                            <option value="1">25 personas</option>
+                            <option value="2">50 personas</option>
+                            <option value="3">75 persoans</option>
+                            <option value="1">100 personas</option>
+                            <option value="2">150 personas</option>
+
+
+
+                        </select>
+
+                    </div>
+                    <br>
+
+                    <div class="mb-3">
+                        <label for="message-text" class="col-form-label">Comentarios:</label>
+                        <textarea class="form-control" id="message-text" name="message-text"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Reservar</button><!---submit/ enviar-->
+                    </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+   
+  
+   
+   
+    <div class="container-fluid">
+        <div class="row p-5 bg-secondary text-white">
+    
+        <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h3">JuanaPrix</p>
+        <a href="#"></a>
+        <hr class="mb-4">
+        <p class="text-white">Metodo de pago</p>
+        <p class="text-white">Metodo de envio</p>
+    
+        </div> 
+    
+        <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h3">Descuentos </p>
+        <a href="#"></a>
+        <hr class="mb-4">
+        <p class="text-white">En productos aleatorios</p>
+    
+        </div> 
+    
+        <div class="col-xs-12 col-md-6 col-lg-3">
+        <p class="h3">Contactanos</p>
+        <a href="#"></a>
+        <hr class="mb-4">
+        <p> <li class="fas fa-home md-3"> Casa Central</li> </p >
+        <p> <li class="fas fa-phone md-3"> Telefono</li> </p >   
+        <p> <li class="fas fa-envelope md-3"> Email</li> </p >
+        <p> <li class="fas fa-home md-3"> Boton de Arrepeentimirnto</li> </p >   
+        </div> 
+    
+         <div class=" col-xs-12 col-md-6 col-lg-3 justify-content-around w-25">
+         <p class="h3">Redes Sociales</p>
+         <a href="#"></a>
+         <hr class="mb-4">
+          <!---arau que le asigne altededor de los elementos un espacio-->
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-instagram"></i> </a>
+        <!----Para que se abra en una ventana nueva-->
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-facebook"></i></a>
+        <!----para agrandar el tamaño del icono-->
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-youtube"></i></a>
+        <a href="#" target="_blank"><i style="font-size: 2rem" class="bi bi-twitter-x"></i></a>
+         
+            
+         </div>     
+    
+        </div>
+    
+      </div>
+
+   
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+</body>
+
+</html>

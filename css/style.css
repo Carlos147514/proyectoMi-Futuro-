@@ -3,6 +3,21 @@
     object-fit: cover;
 }
 
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.5s, color 0.5s;
+}
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+button {
+  margin: 20px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
 /* section */
 
 section {
